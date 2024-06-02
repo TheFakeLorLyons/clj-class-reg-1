@@ -30,7 +30,19 @@
   (let [login-form
         (vertical-panel
          :items [(label :text "Login Here"
-                        :halign :center)]
+                        :halign :center)
+                 (horizontal-panel
+                  :items [(label :text "Username:")
+                          (text :id :username-field)])
+                 (horizontal-panel
+                  :items [(label :text "Password:")
+                          (password :id :password-field)])
+                 (button :text "Submit"
+                  :id :submit-button
+                  :listen [:action (fn [_]
+                                     (let [username (value (text :id :username-field))
+                                           password (value (password :id :password-field))]
+                                       (println "Username:" username "Password:" password)))])]
          :background :goldenrod)]
     login-form))
 
