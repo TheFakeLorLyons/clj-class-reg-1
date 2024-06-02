@@ -38,11 +38,13 @@
                   :items [(label :text "Password:")
                           (password :id :password-field)])
                  (button :text "Submit"
-                  :id :submit-button
-                  :listen [:action (fn [_]
-                                     (let [username (value (text :id :username-field))
-                                           password (value (password :id :password-field))]
-                                       (println "Username:" username "Password:" password)))])]
+                         :id :submit-button
+                         :listen [:action (fn [_]
+                                            (let [username (value (text :id :username-field))
+                                                  password (value (password :id :password-field))]
+                                              (println "Username:" username "Password:" password)))])
+                 (button :text "Create Account" 
+                         :id :create-account-button)]
          :background :goldenrod)]
     login-form))
 
