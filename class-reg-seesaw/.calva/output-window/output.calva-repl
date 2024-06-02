@@ -75,4 +75,413 @@ clj꞉class-reg-seesaw.core꞉> 
 clj꞉class-reg-seesaw.core꞉> 
 ; Syntax error compiling at (src/class_reg_seesaw/core.clj:1:8176).
 ; Unable to resolve symbol: center in this context
+clj꞉class-reg-seesaw.core꞉> (show-options (frame))
+
+; seesaw.core.proxy$javax.swing.JFrame$Tag$fd407141
+;                     Option  Notes/Examples
+; --------------------------  --------------
+;                     :class  A keyword class, in the HTML/CSS sense.
+;                             See (Seesaw.core/select)
+;                   :content  The frame's main content widget
+;                      :icon  The image to be displayed as the icon for this frame
+;                     :icons  Sequence of images to be displayed as the icon for this frame
+;                        :id  A keyword id.
+;                             See (seesaw.core/select)
+;                    :listen  vector of args for (seesaw.core/listen)
+;                   :menubar  The frame's menu bar. See (seesaw.core/menubar).
+;              :minimum-size  [640 :by 480]
+;                             java.awt.Dimension
+;                  :on-close  :hide
+;                             :dispose
+;                             :exit
+;                             :nothing
+;                :resizable?  
+;                  :resource  A i18n prefix for a resource with keys
+;                             [:title :icon]
+;                      :size  [640 :by 480]
+;                             java.awt.Dimension
+;                     :title  The frame's title as string or resource key
+;          :transfer-handler  See (seesaw.dnd/to-transfer-handler)
+;              :undecorated?  
+;                  :visible?  
+nil
+clj꞉class-reg-seesaw.core꞉> (show-options (:image))
+; Execution error (IllegalArgumentException) at class-reg-seesaw.core/eval16226 (form-init15356852352470214717.clj:108).
+; Wrong number of args passed to keyword: :image
+clj꞉class-reg-seesaw.core꞉> 
+(show-options (image))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:1:8176).
+; Unable to resolve symbol: image in this context
+clj꞉class-reg-seesaw.core꞉> (show-options (flow-panel))
+; seesaw.core.proxy$javax.swing.JPanel$Tag$fd407141
+;                     Option  Notes/Examples
+; --------------------------  --------------
+;                     :align  :left
+;                             :right
+;                             :leading
+;                             :trailing
+;                             :center
+;        :align-on-baseline?  
+;                :background  :aliceblue
+;                             "#f00"
+;                             "#FF0000"
+;                             (seesaw.color/color 255 0 0 0 224)
+;                    :borderal  5
+;                             "Border Title"
+;                             [5 "Compound" 10]
+;                             See (seesaw.border/*)
+;                    :bounds  :preferred
+;                             [x y w h]
+;                             Use :* to leave component unchanged:
+;                             [x :* :* h]
+;                     :class  :class-name
+;                             #{:multiple :class-names}
+;                    :cursor  See (seesaw.cursor/cursor)
+;             :drag-enabled?  boolean
+;                  :enabled?  boolean
+;                :focusable?  boolean
+;                      :font  ARIAL-BOLD-18
+;                             :monospaced
+;                             :serif
+;                             :sans-serif
+;                             See (seesaw.font/font)
+;                :foreground  :aliceblue
+;                             "#f00"
+;                             "#FF0000"
+;                             (seesaw.color/color 255 0 0 0 224)
+;                      :hgap  Integer pixels
+;                      :icon  See (seesaw.icon/icon)
+;                        :id  A keyword id for the widget
+;                     :items  A sequence of widgets to add.
+;                    :layout  A layout manager.
+;                    :listen  vector of args for (seesaw.core/listen)
+;                  :location  See (seesaw.core/move! :to)
+;        :location-on-screen  java.awt.Point location in global screen coords
+;              :maximum-size  [640 :by 480]
+;                             java.awt.Dimension
+;              :minimum-size  [640 :by 480]
+;                             java.awt.Dimension
+;                   :opaque?  boolean
+;                     :paint  See (seesaw.core/canvas)
+;                     :popup  javax.swing.JPopupMenu
+;                             (fn [e]) that returns a seq of menu items
+;                             See (seesaw.core/popup)
+;            :preferred-size  [640 :by 480]
+;                             java.awt.Dimension
+;                      :size  [640 :by 480]
+;                             java.awt.Dimension
+;                      :text  A string
+;                             Anything accepted by (clojure.core/slurp)
+;                       :tip  A tooltip string
+;          :transfer-handler  See (seesaw.dnd/to-transfer-handler)
+;                 :user-data  Anything.
+;                             Associate arbitrary user-data with a widget.
+;                             See (seesaw.core/user-data)
+;                      :vgap  Integer pixels
+;                  :visible?  boolean
+nil
+clj꞉class-reg-seesaw.core꞉> 
+; Syntax error compiling at (src/class_reg_seesaw/core.clj:7:36).
+; No such namespace: _io
+clj꞉class-reg-seesaw.core꞉> 
+#'class-reg-seesaw.core/background-image
+clj꞉class-reg-seesaw.core꞉> 
+"field.jpg"
+clj꞉class-reg-seesaw.core꞉> 
+#object[java.net.URL 0x5c3a66cf "file:/home/thefakelorlyons/programming/clojure-projects/May-2024/practice/guis/class-reg/clj-class-reg/clj-class-reg-1/class-reg-seesaw/resources/field.jpg"]
+clj꞉class-reg-seesaw.core꞉> 
+(show-options (border-panel))
+#function[seesaw.core/border-panel]
+clj꞉class-reg-seesaw.core꞉> (show-options (flow-panel))
+; seesaw.core.proxy$javax.swing.JPanel$Tag$fd407141
+;                     Option  Notes/Examples
+; --------------------------  --------------
+;                     :align  :left
+;                             :right
+;                             :leading
+;                             :trailing
+;                             :center
+;        :align-on-baseline?  
+;                :background  :aliceblue
+;                             "#f00"
+;                             "#FF0000"
+;                             (seesaw.color/color 255 0 0 0 224)
+;                    :border  5
+;                             "Border Title"
+;                             [5 "Compound" 10]
+;                             See (seesaw.border/*)
+;                    :bounds  :preferred
+;                             [x y w h]
+;                             Use :* to leave component unchanged:
+;                             [x :* :* h]
+;                     :class  :class-name
+;                             #{:multiple :class-names}
+;                    :cursor  See (seesaw.cursor/cursor)
+;             :drag-enabled?  boolean
+;                  :enabled?  boolean
+;                :focusable?  boolean
+;                      :font  ARIAL-BOLD-18
+;                             :monospaced
+;                             :serif
+;                             :sans-serif
+;                             See (seesaw.font/font)
+;                :foreground  :aliceblue
+;                             "#f00"
+;                             "#FF0000"
+;                             (seesaw.color/color 255 0 0 0 224)
+;                      :hgap  Integer pixels
+;                      :icon  See (seesaw.icon/icon)
+;                        :id  A keyword id for the widget
+;                     :items  A sequence of widgets to add.
+;                    :layout  A layout manager.
+;                    :listen  vector of args for (seesaw.core/listen)
+;                  :location  See (seesaw.core/move! :to)
+;        :location-on-screen  java.awt.Point location in global screen coords
+;              :maximum-size  [640 :by 480]
+;                             java.awt.Dimension
+;              :minimum-size  [640 :by 480]
+;                             java.awt.Dimension
+;                   :opaque?  boolean
+;                     :paint  See (seesaw.core/canvas)
+;                     :popup  javax.swing.JPopupMenu
+;                             (fn [e]) that returns a seq of menu items
+;                             See (seesaw.core/popup)
+;            :preferred-size  [640 :by 480]
+;                             java.awt.Dimension
+;                      :size  [640 :by 480]
+;                             java.awt.Dimension
+;                      :text  A string
+;                             Anything accepted by (clojure.core/slurp)
+;                       :tip  A tooltip string
+;          :transfer-handler  See (seesaw.dnd/to-transfer-handler)
+;                 :user-data  Anything.
+;                             Associate arbitrary user-data with a widget.
+;                             See (seesaw.core/user-data)
+;                      :vgap  Integer pixels
+;                  :visible?  boolean
+nil
+clj꞉class-reg-seesaw.core꞉> (show-options (form-panel))
+#function[seesaw.core/form-panel]
+clj꞉class-reg-seesaw.core꞉> 
+(show-options (flow-panel))
+; seesaw.core.proxy$javax.swing.JPanel$Tag$fd407141
+;                     Option  Notes/Examples
+; --------------------------  --------------
+;                     :align  :left
+;                             :right
+;                             :leading
+;                             :trailing
+;                             :center
+;        :align-on-baseline?  
+;                :background  :aliceblue
+;                             "#f00"
+;                             "#FF0000"
+;                             (seesaw.color/color 255 0 0 0 224)
+;                    :border  5
+;                             "Border Title"
+;                             [5 "Compound" 10]
+;                             See (seesaw.border/*)
+;                    :bounds  :preferred
+;                             [x y w h]
+;                             Use :* to leave component unchanged:
+;                             [x :* :* h]
+;                     :class  :class-name
+;                             #{:multiple :class-names}
+;                    :cursor  See (seesaw.cursor/cursor)
+;             :drag-enabled?  boolean
+;                  :enabled?  boolean
+;                :focusable?  boolean
+;                      :font  ARIAL-BOLD-18
+;                             :monospaced
+;                             :serif
+;                             :sans-serif
+;                             See (seesaw.font/font)
+;                :foreground  :aliceblue
+;                             "#f00"
+;                             "#FF0000"
+;                             (seesaw.color/color 255 0 0 0 224)
+;                      :hgap  Integer pixels
+;                      :icon  See (seesaw.icon/icon)
+;                        :id  A keyword id for the widget
+;                     :items  A sequence of widgets to add.
+;                    :layout  A layout manager.
+;                    :listen  vector of args for (seesaw.core/listen)
+;                  :location  See (seesaw.core/move! :to)
+;        :location-on-screen  java.awt.Point location in global screen coords
+;              :maximum-size  [640 :by 480]
+;                             java.awt.Dimension
+;              :minimum-size  [640 :by 480]
+;                             java.awt.Dimension
+;                   :opaque?  boolean
+;                     :paint  See (seesaw.core/canvas)
+;                     :popup  javax.swing.JPopupMenu
+;                             (fn [e]) that returns a seq of menu items
+;                             See (seesaw.core/popup)
+;            :preferred-size  [640 :by 480]
+;                             java.awt.Dimension
+;                      :size  [640 :by 480]
+;                             java.awt.Dimension
+;                      :text  A string
+;                             Anything accepted by (clojure.core/slurp)
+;                       :tip  A tooltip string
+;          :transfer-handler  See (seesaw.dnd/to-transfer-handler)
+;                 :user-data  Anything.
+;                             Associate arbitrary user-data with a widget.
+;                             See (seesaw.core/user-data)
+;                      :vgap  Integer pixels
+;                  :visible?  boolean
+nil
+clj꞉class-reg-seesaw.core꞉> 
+(show-options (vertical-panel))
+; seesaw.core.proxy$javax.swing.JPanel$Tag$fd407141
+;                     Option  Notes/Examples
+; --------------------------  --------------
+;                :background  :aliceblue
+;                             "#f00"
+;                             "#FF0000"
+;                             (seesaw.color/color 255 0 0 0 224)
+;                    :border  5
+;                             "Border Title"
+;                             [5 "Compound" 10]
+;                             See (seesaw.border/*)
+;                    :bounds  :preferred
+;                             [x y w h]
+;                             Use :* to leave component unchanged:
+;                             [x :* :* h]
+;                     :class  :class-name
+;                             #{:multiple :class-names}
+;                    :cursor  See (seesaw.cursor/cursor)
+;             :drag-enabled?  boolean
+;                  :enabled?  boolean
+;                :focusable?  boolean
+;                      :font  ARIAL-BOLD-18
+;                             :monospaced
+;                             :serif
+;                             :sans-serif
+;                             See (seesaw.font/font)
+;                :foreground  :aliceblue
+;                             "#f00"
+;                             "#FF0000"
+;                             (seesaw.color/color 255 0 0 0 224)
+;                      :icon  See (seesaw.icon/icon)
+;                        :id  A keyword id for the widget
+;                     :items  A sequence of widgets to add.
+;                    :layout  A layout manager.
+;                    :listen  vector of args for (seesaw.core/listen)
+;                  :location  See (seesaw.core/move! :to)
+;        :location-on-screen  java.awt.Point location in global screen coords
+;              :maximum-size  [640 :by 480]
+;                             java.awt.Dimension
+;                             java.awt.Dimension
+;              :minimum-size  [640 :by 480]
+;                   :opaque?  boolean
+;                     :paint  See (seesaw.core/canvas)
+;                     :popup  javax.swing.JPopupMenu
+;                             (fn [e]) that returns a seq of menu items
+;                             See (seesaw.core/popup)
+;            :preferred-size  [640 :by 480]
+;                             java.awt.Dimension
+;                      :size  [640 :by 480]
+;                             java.awt.Dimension
+;                      :text  A string
+;                             Anything accepted by (clojure.core/slurp)
+;                       :tip  A tooltip string
+;          :transfer-handler  See (seesaw.dnd/to-transfer-handler)
+;                 :user-data  Anything.
+;                             Associate arbitrary user-data with a widget.
+;                             See (seesaw.core/user-data)
+;                  :visible?  boolean
+nil
+clj꞉class-reg-seesaw.core꞉> 
+(show-options (vertical-panel :layout))
+; Execution error (IllegalArgumentException) at seesaw.util/check-args (util.clj:24).
+; opts must be a map or have an even number of entries
+clj꞉class-reg-seesaw.core꞉> 
+(show-options (font))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:400:15).
+; Unable to resolve symbol: font in this context
+clj꞉class-reg-seesaw.core꞉> 
+(show-options (f/font))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:404:15).
+; No such namespace: f
+clj꞉class-reg-seesaw.core꞉> 
+(show-options (label))
+; seesaw.core.proxy$javax.swing.JLabel$Tag$fd407141
+;                     Option  Notes/Examples
+; --------------------------  --------------
+;                :background  :aliceblue
+;                             "#f00"
+;                             "#FF0000"
+;                             (seesaw.color/color 255 0 0 0 224)
+;                    :border  5
+;                             "Border Title"
+;                             [5 "Compound" 10]
+;                             See (seesaw.border/*)
+;                    :bounds  :preferred
+;                             [x y w h]
+;                             Use :* to leave component unchanged:
+;                             [x :* :* h]
+;                     :class  :class-name
+;                             #{:multiple :class-names}
+;                    :cursor  See (seesaw.cursor/cursor)
+;             :drag-enabled?  boolean
+;                  :enabled?  boolean
+;                :focusable?  boolean
+;                      :font  ARIAL-BOLD-18
+;                             :monospaced
+;                             :serif
+;                             :sans-serif
+;                             See (seesaw.font/font)
+;                :foreground  :aliceblue
+;                             "#f00"
+;                             "#FF0000"
+;                             (seesaw.color/color 255 0 0 0 224)
+;           :h-text-position  :left
+;                             :right
+;                             :leading
+;                             :trailing
+;                             :center
+;                    :halign  :left
+;                             :right
+;                             :leading
+;                             :trailing
+;                             :center
+;                      :icon  See (seesaw.icon/icon)
+;                        :id  A keyword id for the widget
+;                    :layout  A layout manager.
+;                    :listen  vector of args for (seesaw.core/listen)
+;                  :location  See (seesaw.core/move! :to)
+;        :location-on-screen  java.awt.Point location in global screen coords
+;              :maximum-size  [640 :by 480]
+;                             java.awt.Dimension
+;              :minimum-size  [640 :by 480]
+;                             java.awt.Dimension
+;                   :opaque?  boolean
+;                     :paint  See (seesaw.core/canvas)
+;                     :popup  javax.swing.JPopupMenu
+;                             (fn [e]) that returns a seq of menu items
+;                             See (seesaw.core/popup)
+;            :preferred-size  [640 :by 480]
+;                             java.awt.Dimension
+;                  :resource  A i18n prefix for a resource with keys
+;                             [:text :foreground :background :font :icon :tip]
+;                      :size  [640 :by 480]
+;                             java.awt.Dimension
+;                      :text  A string
+;                             Anything accepted by (clojure.core/slurp)
+;                       :tip  A tooltip string
+;          :transfer-handler  See (seesaw.dnd/to-transfer-handler)
+;                 :user-data  Anything.
+;                             Associate arbitrary user-data with a widget.
+;                             See (seesaw.core/user-data)
+;           :v-text-position  :top
+;                             :center
+;                             :bottom
+;                    :valign  :top
+;                             :center
+;                             :bottom
+;                  :visible?  boolean
+nil
+clj꞉class-reg-seesaw.core꞉> 
+:right
 clj꞉class-reg-seesaw.core꞉> 
