@@ -4,7 +4,7 @@
   (:require [clojure.java.io :as io]
             [seesaw.font :as f]
             [class-reg-seesaw.frame :refer [main-frame]]
-            [class-reg-seesaw.navigation :refer [update-frame]]))
+            [class-reg-seesaw.core :as login]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                         ;               Resources             ;
@@ -15,6 +15,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                         ;                   UI                ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(declare update-frame)
 
 (defn to-be-determined []
   (let [login-form
@@ -51,6 +53,11 @@
              :minimum-size [800 :by 600]
              :on-close :exit)]
   frame) )
+
+(defn update-frame [page-id]
+  (if (= :home page-id)
+    (load-page)
+    (login/make-content)))
 
 (defn user-home-page [] 
   (let [frame (frame
