@@ -44,7 +44,7 @@
                                               (println "Username:" username "Password:" password)))])
                  (button :text "Create Account"
                          :id :create-account-button
-                         #_#_:listen [:action (fn [_] (navigation/show-page :m-frame))])]
+                         :listen [:action (fn [_] (navigation/show-page :m-frame))])]
          :background :goldenrod)]
     login-form))
 
@@ -69,7 +69,7 @@
   (let [home-frame (seesaw/frame
                     :id :m-frame
                     :title "U Class-Reg-Clj"
-                    #_#_:content (make-content)
+                    :content (make-content)
                     :minimum-size [800 :by 600]
                     :on-close :exit)]
     home-frame))
