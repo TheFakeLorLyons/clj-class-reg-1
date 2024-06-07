@@ -3,15 +3,8 @@
   (:use seesaw.dev)
   (:require [clojure.java.io :as io]
             [seesaw.font :as f]
-            [class-reg-seesaw.user-home :as u-home]))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-                                        ;                Routing              ;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-(defn switch-to-home-page [frame]
-  (seesaw/content! frame (user-home/user-home-page)))
+            [class-reg-seesaw.frame :refer [main-frame]]
+            [class-reg-seesaw.navigation :refer [update-frame]]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                         ;               Resources             ;
@@ -45,7 +38,7 @@
 
 (defn login-screen-form []
   (let [login-form
-        (vertical-panel
+        (vertical-panel 
          :items [(label :text "Login Here"
                         :halign :center)
                  (horizontal-panel
@@ -62,7 +55,7 @@
                                               (println "Username:" username "Password:" password)))])
                  (button :text "Create Account" 
                          :id :create-account-button
-                         :listen [:action #(switch-to-home-page frame)])]
+                         :listen [:action (fn [_] (config! main-frame :content (update-frame :home)))])]
          :background :goldenrod)]
     login-form))
 
@@ -82,22 +75,14 @@
          :background :black)]
     content-panel))
 
-(defn main-frame []
-  (let [frame (frame
-               :id :m-frame
-               :title "U Class-Reg-Clj"
-               :content (make-content)
-               :minimum-size [800 :by 600]
-               :on-close :exit)]
-   frame))
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                         ;                 Main                ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defn -main [& args]
-  (invoke-later
-   (-> (main-frame)
+  (invoke-later 
+   (-> main-frame
+       (config! :content (make-content))
        pack!
        show!)))
 

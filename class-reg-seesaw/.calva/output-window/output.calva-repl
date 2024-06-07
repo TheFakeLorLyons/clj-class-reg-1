@@ -583,3 +583,44 @@ clj꞉class-reg-seesaw.core꞉> 
 ;                  :visible?  boolean
 nil
 clj꞉class-reg-seesaw.core꞉> 
+(+ 4
+   5
+   7
+   8
+   2
+   5
+   9
+   7
+   8)
+55
+clj꞉class-reg-seesaw.core꞉> 
+55
+clj꞉class-reg-seesaw.core꞉> 
+(mean [6 8 14 7 16 9])
+; Syntax error compiling at (.calva/output-window/output.calva-repl:599:1).
+; Unable to resolve symbol: mean in this context
+clj꞉class-reg-seesaw.core꞉> 
+req '(core.matrix.stats)
+(core.matrix.stats)
+clj꞉class-reg-seesaw.core꞉> 
+(core.matrix.stats/mean [6.0 8.0 14.0 7.0 16.0 9.0])
+; Syntax error compiling at (.calva/output-window/output.calva-repl:606:1).
+; Unable to resolve symbol: mean in this context
+clj꞉class-reg-seesaw.core꞉> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:606:1).
+; Unable to resolve symbol: mean in this context
+clj꞉class-reg-seesaw.core꞉> 
+; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:445).
+; core.matrix.stats
+clj꞉class-reg-seesaw.core꞉> 
+(+ [6.0 8.0 14.0 7.0 16.0 9.0])
+; Execution error (ClassCastException) at java.lang.Class/cast (Class.java:4067).
+; Cannot cast clojure.lang.PersistentVector to java.lang.Number
+clj꞉class-reg-seesaw.core꞉> 
+(+ 6.0 8.0 14.0 7.0 16.0 9.0)
+60.0
+clj꞉class-reg-seesaw.core꞉> 
+(/ 60 6)
+10
+clj꞉class-reg-seesaw.core꞉> 
+; nREPL Connection was closed
