@@ -3,7 +3,7 @@
   (:use seesaw.dev)
   (:require [clojure.java.io :as io]
             [seesaw.font :as f]
-            [class-reg-seesaw.frame :refer [main-frame]]
+            #_[class-reg-seesaw.frame :refer [main-frame]]
             [class-reg-seesaw.core :as login]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -23,7 +23,7 @@
         (vertical-panel
          :items [(button :text "Log out?"
                          :id :submit-button 
-                         :listen [:action (fn [_] (config! main-frame :content (update-frame :login)))])
+                         #_#_:listen [:action (fn [_] (config! main-frame :content (update-frame :login)))])
                  (button :text "I don't do anything"
                          :id :create-account-button)]
          :background :goldenrod)]

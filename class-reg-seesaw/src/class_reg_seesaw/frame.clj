@@ -1,4 +1,4 @@
-(ns class-reg-seesaw.frame 
+#_#_#_#_#_#_#_#(ns class-reg-seesaw.frame 
   (:use seesaw.core)
   (:use seesaw.dev)
   (:require [clojure.java.io :as io]
@@ -73,3 +73,4 @@
                     :minimum-size [800 :by 600]
                     :on-close :exit)]
     home-frame))
+{}
