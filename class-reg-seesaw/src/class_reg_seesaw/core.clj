@@ -20,6 +20,10 @@
 (declare make-content)
 (declare main-frame)
 
+(defonce register (atom [{:students []
+                          :classes []
+                          :current-user "Default User"}]))
+
 (defn center-the-heading []
   (let [center-panel
         (border-panel
@@ -41,25 +45,33 @@
     header-content))
 
 (defn login-screen-form []
-  (let [login-form
+  (let [username-lbl (text :id :username-lbl)
+        password-lbl (password :id :password-lbl)
+        login-form
         (vertical-panel
          :items [(label :text "Login Here"
                         :halign :center)
                  (horizontal-panel
                   :items [(label :text "Username:")
-                          (text :id :username-field)])
+                          username-lbl])
                  (horizontal-panel
                   :items [(label :text "Password:")
-                          (password :id :password-field)])
+                          password-lbl])
                  (button :text "Submit"
                          :id :submit-button
                          :listen [:action (fn [_]
-                                            (let [username (value (text :id :username-field))
-                                                  password (value (password :id :password-field))]
+                                            (let [username (value username-lbl)
+                                                  password (value password-lbl)]
+                                              (alert "successfully logged in!")
                                               (println "Username:" username "Password:" password)))])
                  (button :text "Create Account"
                          :id :create-account-button
-                         :listen [:action (fn [_] (config! main-frame :content (update-frame :home)))])]
+                         :listen [:action (fn [_] 
+                                            (let [username (value username-lbl)
+                                                  #_#_password (value password-lbl)]
+                                              (swap! register assoc-in [0 :current-user] username)
+                                              (alert (str "successfully created account for " username"!"))
+                                              (config! main-frame :content (update-frame :home))))])]
          :background :goldenrod)]
     login-form))
 
@@ -104,10 +116,11 @@
     login-form))
 
 (defn user-home-container []
-  (let [conjoined-panel
+  (let [current-user (get-in @register [0 :current-user])
+        conjoined-panel
         (border-panel
          :vgap 20
-         :north (label "This is the user home page.")
+         :north (label (str current-user "'s home page!"))
          :center (to-be-determined)
          :background :gray)]
     conjoined-panel))
