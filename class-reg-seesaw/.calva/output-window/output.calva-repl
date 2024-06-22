@@ -36,8 +36,8 @@ You can configure this with the setting:
 ;   - See https://calva.io/connect-sequences/
 ; 
 
-(; Starting Jack-in Terminal: (cd /home/thefakelorlyons/programming/clojure-projects/May-2024/practice/guis/class-reg/clj-class-reg/clj-class-reg-1/class-reg-seesaw; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
-; Using host:port 127.0.0.1:37365 ...
+; Starting Jack-in Terminal: (cd /home/thefakelorlyons/programming/clojure-projects/May-2024/practice/guis/class-reg/clj-class-reg/clj-class-reg-1/class-reg-seesaw; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:41023 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
@@ -48,43 +48,10 @@ about why stdout printed to this file is prepended with `;` to be line comments.
 clj꞉my-gui-project.core꞉> 
 ; Jack-in done.
 clj꞉my-gui-project.core꞉> 
-"I don't do anything"
-clj꞉class-reg-seesaw.core꞉> 
-(+ 1 2)
-3
-clj꞉class-reg-seesaw.core꞉> 
-(:students)
-; Execution error (IllegalArgumentException) at class-reg-seesaw.core/eval15980 (form-init16210562539087578020.clj:56).
-; Wrong number of args passed to keyword: :students
-clj꞉class-reg-seesaw.core꞉> 
-(state :students)
-; Syntax error compiling at (.calva/output-window/output.calva-repl:60:1).
-; Unable to resolve symbol: state in this context
-clj꞉class-reg-seesaw.core꞉> 
-#'class-reg-seesaw.core/register
-; Syntax error compiling at (.calva/output-window/output.calva-repl:64:1).
-; Unable to resolve symbol: state in this context
-clj꞉class-reg-seesaw.core꞉> 
-(state (:students))
-clj꞉class-reg-seesaw.core꞉> 
-(register :students)
-; Execution error (ClassCastException) at class-reg-seesaw.core/eval16224 (form-init16210562539087578020.clj:70).
-; class clojure.lang.Atom cannot be cast to class clojure.lang.IFn (clojure.lang.Atom and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉class-reg-seesaw.core꞉> 
-(register (:students))
-; Execution error (ClassCastException) at class-reg-seesaw.core/eval16226 (form-init16210562539087578020.clj:74).
-; class clojure.lang.Atom cannot be cast to class clojure.lang.IFn (clojure.lang.Atom and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉class-reg-seesaw.core꞉> 
-(register (:students))
-; Execution error (ClassCastException) at class-reg-seesaw.core/eval16228 (form-init16210562539087578020.clj:78).
-; class clojure.lang.Atom cannot be cast to class clojure.lang.IFn (clojure.lang.Atom and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉class-reg-seesaw.core꞉> 
-(register :students)
-; Execution error (ClassCastException) at class-reg-seesaw.core/eval16230 (form-init16210562539087578020.clj:82).
-; class clojure.lang.Atom cannot be cast to class clojure.lang.IFn (clojure.lang.Atom and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉class-reg-seesaw.core꞉> 
-@register
-{:students {}, :classes {}}
-clj꞉class-reg-seesaw.core꞉> 
-#object[seesaw.core.proxy$javax.swing.JButton$Tag$fd407141 0x7669394e "seesaw.core.proxy$javax.swing.JButton$Tag$fd407141[,0,0,0x0,invalid,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@6066fe99,flags=296,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=Submit,defaultCapable=true]"]
-clj꞉class-reg-seesaw.core꞉> 
+nil
+clj꞉class-reg-seesaw.student꞉> 
+nil
+clj꞉class-reg-seesaw.student꞉> 
+; Syntax error compiling at (src/class_reg_seesaw/student.clj:1:8654).
+; Unable to resolve symbol: sample-user in this context
+clj꞉class-reg-seesaw.student꞉> 

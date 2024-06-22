@@ -4,7 +4,8 @@
   (:require [clojure.java.io :as io]
             [seesaw.font :as f]
             #_[class-reg-seesaw.frame :refer [main-frame]]
-            #_[class-reg-seesaw.navigation :as navigation]))
+            #_[class-reg-seesaw.navigation :as navigation]
+            [class-reg-seesaw.student]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                         ;               Resources             ;
@@ -62,7 +63,7 @@
                          :listen [:action (fn [_]
                                             (let [username (value username-lbl)
                                                   password (value password-lbl)]
-                                              (alert "successfully logged in!")
+                                              (alert (str "successfully logged in " username "!"))
                                               (println "Username:" username "Password:" password)))])
                  (button :text "Create Account"
                          :id :create-account-button
